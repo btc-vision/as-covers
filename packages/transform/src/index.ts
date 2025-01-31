@@ -12,7 +12,7 @@
  * Have fun!
  */
 
-// Import visitor-as
+// Import @btc-vision/visitor-as
 import {
   ArrowKind,
   BinaryExpression,
@@ -39,9 +39,9 @@ import { Transform } from "assemblyscript/dist/transform.js";
 
 import { createPointID } from "./util.js";
 
-import { SimpleParser, BaseVisitor } from "visitor-as";
+import { SimpleParser, BaseVisitor } from "@btc-vision/visitor-as";
 
-import { RangeTransform } from "visitor-as/dist/transformRange.js";
+import { RangeTransform } from "@btc-vision/visitor-as/dist/transformRange.js";
 
 import linecol from "line-column";
 
@@ -247,9 +247,9 @@ class CoverTransform extends BaseVisitor {
         replacer.visit(funcCoverStatement);
 
         // Handle arrow functions
-        if (!(dec.body instanceof BlockStatement)) {
-          if (!(dec.body instanceof ExpressionStatement)) {
-            throw new TypeError("Expected function declaration body to be a block or expression");
+        if (!(dec.body.kind === NodeKind.Block)) {
+          if (!(dec.body.kind === NodeKind.Expression)) {
+            throw new TypeError("Expected function declaration body to be a block or expression 1");
           }
 
           const expr = (dec.body as ExpressionStatement).expression;

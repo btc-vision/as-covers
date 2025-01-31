@@ -1,6 +1,6 @@
 {
-  "name": "@as-covers/glue",
-  "version": "0.4.2",
+  "name": "@btc-vision/as-covers-glue",
+  "version": "0.4.3",
   "description": "Glue code for code coverage using node.js",
   "main": "lib/index.js",
   "type": "module",
@@ -14,12 +14,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "csv-stringify": "^6.2.3",
-    "table": "^6.8.1"
+    "csv-stringify": "^6.5.2",
+    "table": "^6.9.0"
   },
   "devDependencies": {
-    "@assemblyscript/loader": "^0.25.0",
-    "@types/table": "^6.3.2"
+    "@assemblyscript/loader": "^0.27.32"
   },
   "files": [
     "lib"

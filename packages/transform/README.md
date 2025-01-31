@@ -4,7 +4,7 @@
 ## Installation
 
 ```bash
-~ npm install @as-covers/transform
+~ npm install @btc-vision/as-covers-transform
 ```# AS-Covers
 
 Code coverage for AssemblyScript projects that uses a few simple packages to make visualizing how well your code branches are covered.
@@ -14,15 +14,15 @@ Code coverage for AssemblyScript projects that uses a few simple packages to mak
 First install from npm.
 
 ```sh
-npm install @as-covers/core
+npm install @btc-vision/core
 ```
 
 Next, add the following transform and entry point to your AssemblyScript compilation.
 
 ```sh
 # uses multiple lines for clarity
-asc node_modules/@as-covers/assembly/index.ts
-  --transform @as-covers/transform/lib/index.js
+asc node_modules/@btc-vision/as-covers-assembly/index.ts
+  --transform @btc-vision/as-covers-transform/lib/index.js
   --explicitStart
 ```
 
@@ -31,7 +31,7 @@ These will inject some immutable cover points into your web assembly binary.
 The next step is to instantiate the module:
 
 ```ts
-import { Covers } from "@as-covers/glue";
+import { Covers } from "@btc-vision/as-covers-glue";
 import * as fs from "fs";
 import { instantiate } from "@assemblyscript/loader";
 
