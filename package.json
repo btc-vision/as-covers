@@ -1,6 +1,6 @@
 {
   "name": "@btc-vision/as-covers",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Code coverage transform for AssemblyScript",
   "main": "index.js",
   "type": "module",
