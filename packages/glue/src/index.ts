@@ -335,12 +335,19 @@ export class Covers {
             rep.coveredFunctionPercent,
             // Expr Percentage
             rep.coveredExpressionPercent,
-            // Some stuff to limit uncovered points length.
+            // Show uncovered points in batches of 6 per line
             i === report.size - 1
               ? ""
               : uncoveredPoints.length > 6
-              ? `${uncoveredPoints.slice(0, 6).map(linecolText).join(", ")}...`
-              : uncoveredPoints.map(linecolText).join(", "),
+                ? uncoveredPoints
+                  .map(linecolText)
+                  .reduce((acc, point, index) => {
+                    if (index % 6 === 0 && index > 0) {
+                      return acc + ",\n" + point;
+                    }
+                    return acc + (index === 0 ? "" : ", ") + point;
+                  }, "")
+                : uncoveredPoints.map(linecolText).join(", "),
           ];
         }),
       ],
