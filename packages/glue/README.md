@@ -35,7 +35,7 @@ The next step is to instantiate the module:
 ```ts
 import { Covers } from "@btc-vision/as-covers-glue";
 import * as fs from "fs";
-import { instantiate } from "@assemblyscript/loader";
+import { instantiate } from "@btc-vision/as-loader";
 
 // import your web assembly binary
 const binary = fs.readFileSync("build/untouched.wasm");
