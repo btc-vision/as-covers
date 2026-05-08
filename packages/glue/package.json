@@ -15,10 +15,12 @@
   "license": "MIT",
   "dependencies": {
     "csv-stringify": "^6.7.0",
-    "table": "^6.9.0"
+    "table": "^6.9.0",
+    "yaml": "^2.8.4"
   },
   "devDependencies": {
-    "@btc-vision/as-loader": "^0.0.0"
+    "@btc-vision/as-loader": "^0.0.0",
+    "typescript": "^6.0.3"
   },
   "files": [
     "lib"

@@ -33,9 +33,9 @@ import {
   SwitchCase,
   TernaryExpression,
   Token,
-} from "assemblyscript/dist/assemblyscript.js";
+} from "@btc-vision/assemblyscript/dist/assemblyscript.js";
 
-import { Transform } from "assemblyscript/dist/transform.js";
+import { Transform } from "@btc-vision/assemblyscript/dist/transform.js";
 
 import { createPointID } from "./util.js";
 

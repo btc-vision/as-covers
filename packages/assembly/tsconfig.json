@@ -1,3 +1,3 @@
 {
-  "extends": "assemblyscript/std/assembly.json"
+  "extends": "@btc-vision/assemblyscript/std/assembly.json"
 }

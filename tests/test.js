@@ -1,7 +1,7 @@
 // This is the standard test for AS-Covers.
 // If it fails, something was changed that broke it.
 // To add new checks, just copy-and-paste coverReport.json to coverReportSnapshot.json.
-import loader from "@assemblyscript/loader";
+import { instantiateSync } from "@btc-vision/as-loader";
 import fs from "fs";
 import { Covers } from "../packages/glue/lib/index.js";
 const covers = new Covers();
@@ -10,7 +10,7 @@ import Linecol from "line-column";
 const coverReportSnapshotLocation = "./tests/output/coverReportSnapshot.json";
 
 console.log("-- Instantiating module. --");
-const wasmModule = loader.instantiateSync(
+const wasmModule = instantiateSync(
   fs.readFileSync("./tests/output/output.wasm"),
   covers.installImports({})
 );
